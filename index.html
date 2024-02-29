@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="top">
+        <img class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo">
+        <h1 class="title">Is it a Palindrome?</h1>
+      </div>
+      <div class="search"> 
+          <label for="text-input" class="label">Enter in text to check for a palindrome:</label>
+          <input id="text-input" type="text" placeholder="racecar" name="text-input"/>
+          <button id="check-btn" type="submit">Check</button>
+        <div id="result">
+          <p><span id="answer"></span></p>
+        </div>
+      </div>
+      <div class="description">
+        <p class="definition">A <em class="bold"><a class="link" href="https://en.wikipedia.org/wiki/Palindrome" alt="palindrome wiki">palindrome</a></em> is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
+      </div>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
