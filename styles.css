@@ -114,7 +114,7 @@ body {
   color: white;
 }
 
-.result {
+#result {
   display: flex;
   align-items: center;
   justify-content: center;

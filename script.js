@@ -1,30 +1,27 @@
-const response = document.getElementById('text-input');
 
-if (response === '') {
+let result = document.getElementById('answer');
+
+let arrResponse = [];
+
+let response = document.getElementById('text-input');
+
+let isPalindrome = `${response.value} <em class="bold">is</em> a palindrome`
+let isNotPal = `${response.value} is <em class="bold">not</em> a palindrome`
+
+function palindromeChecker(){
+  console.log(response.value);
+  if (response.value === '') {
     alert('Please input a value');
     return;
   }
-
-const result = document.getElementById('answer');
-
-  response.tolowercase();
-
-const responseShort = response.replace(/[^0-9a-z]/gi, '')
-
-const reverseResponse = [];
-const arrResponse = [];
-
-const isPalindrome = `${response} <em class="bold">is</em> a palindrome`
-
-const isNotPal = `${response} is <em class="bold">not</em> a palindrome`
-
-arrResponse = responseShort.split('');
-reverseResponse = arrResponse.reverse();
-
-function palindromeChecker(){
-  for(let i = 0; i < arrResponse.length; i++){
-    if (arrResponse[i] !== reverseResponse[i]){
+  const responseShort = response.value.toLowerCase().replace(/[^0-9a-z]/gi, '');
+  arrResponse = responseShort.split('');
+  const  isPalindrome = `${response.value} <em class="bold">is</em> a palindrome`
+  const isNotPal = `${response.value} is <em class="bold">not</em> a palindrome`
+  for(let i = 0; i <= arrResponse.length; i++){
+    if (arrResponse[i] !== arrResponse[arrResponse.length - i - 1]){
       result.innerHTML = isNotPal;
+      return;
     }
     result.innerHTML = isPalindrome;
   }
