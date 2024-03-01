@@ -5,9 +5,6 @@ let arrResponse = [];
 
 let response = document.getElementById('text-input');
 
-let isPalindrome = `${response.value} <em class="bold">is</em> a palindrome`
-let isNotPal = `${response.value} is <em class="bold">not</em> a palindrome`
-
 function palindromeChecker(){
   console.log(response.value);
   if (response.value === '') {
